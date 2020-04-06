@@ -1,5 +1,11 @@
 import java.util.Arrays;
 
+/*Java provides Comparable interface which should be implemented by any custom class if we want to use Arrays or Collections sorting methods.
+ * The Comparable interface has compareTo(T obj) method which is used by sorting methods, you can check any Wrapper, String or
+ * Date class to confirm this. We should override this method in such a way that it returns a negative integer, zero, or a positive integer
+ * if “this” object is less than, equal to, or greater than the object passed as an argument.
+ */
+
 public class comparableDemo implements Comparable<comparableDemo> {
 	private int id;
 	private String name;
@@ -63,5 +69,13 @@ public class comparableDemo implements Comparable<comparableDemo> {
 		System.out.println(Arrays.toString(empArr));
 
 	}
+	/*
+	 * So now we know that if we want to sort java object array or list, we need to
+	 * implement java Comparable interface to provide default sorting and we should
+	 * implement java Comparator interface to provide different ways of sorting.We
+	 * can also create separate class that implements Comparator interface and then
+	 * use it.
+	 * 
+	 */
 
 }
