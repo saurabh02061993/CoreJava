@@ -1,12 +1,12 @@
 import java.util.Arrays;
 
-public class comparatorAndComparable implements Comparable<comparatorAndComparable> {
+public class comparableDemo implements Comparable<comparableDemo> {
 	private int id;
 	private String name;
 	private int salary;
 	private int age;
 
-	public comparatorAndComparable(int id, String name, int age, int salary) {
+	public comparableDemo(int id, String name, int age, int salary) {
 		this.id = id;
 		this.name = name;
 		this.age = age;
@@ -38,7 +38,7 @@ public class comparatorAndComparable implements Comparable<comparatorAndComparab
 
 	// name wise sorting
 	@Override
-	public int compareTo(comparatorAndComparable o) {
+	public int compareTo(comparableDemo o) {
 		// TODO Auto-generated method stub
 		return this.name.compareTo(o.name);
 	}
@@ -53,12 +53,12 @@ public class comparatorAndComparable implements Comparable<comparatorAndComparab
 
 	public static void main(String[] args) {
 
-		comparatorAndComparable[] empArr = new comparatorAndComparable[4];
+		comparableDemo[] empArr = new comparableDemo[4];
 
-		empArr[0] = new comparatorAndComparable(10, "Mikey", 25, 10000);
-		empArr[1] = new comparatorAndComparable(20, "Arun", 29, 20000);
-		empArr[2] = new comparatorAndComparable(5, "Lisa", 35, 5000);
-		empArr[3] = new comparatorAndComparable(1, "Pankaj", 32, 50000);
+		empArr[0] = new comparableDemo(10, "Mikey", 25, 10000);
+		empArr[1] = new comparableDemo(20, "Arun", 29, 20000);
+		empArr[2] = new comparableDemo(5, "Lisa", 35, 5000);
+		empArr[3] = new comparableDemo(1, "Pankaj", 32, 50000);
 		Arrays.sort(empArr);
 		System.out.println(Arrays.toString(empArr));
 
